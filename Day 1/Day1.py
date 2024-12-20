@@ -1,5 +1,8 @@
-name = input("What is your name?\n- ");
+print("\nWelcome to the Band Name Generator\n ")
+city = input("What's the name of the city you grew up in?\n- ")
 
-value = len(name);
+pet_name = input("\nWhat's your pet's name?\n- ")
 
-print(value);
+print("\nYour band name could be " + city + " " + pet_name);
+
+# that's all for the day one. 
