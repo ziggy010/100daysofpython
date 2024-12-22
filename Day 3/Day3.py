@@ -1,6 +1,46 @@
-print("\nWelcome to Python Pizza Deliveries!\n")
+print('''
+*******************************************************************************
+          |                   |                  |                     |
+ _________|________________.=""_;=.______________|_____________________|_______
+|                   |  ,-"_,=""     `"=.|                  |
+|___________________|__"=._o`"-._        `"=.______________|___________________
+          |                `"=._o`"=._      _`"=._                     |
+ _________|_____________________:=._o "=._."_.-="'"=.__________________|_______
+|                   |    __.--" , ; `"=._o." ,-"""-._ ".   |
+|___________________|_._"  ,. .` ` `` ,  `"-._"-._   ". '__|___________________
+          |           |o`"=._` , "` `; .". ,  "-._"-._; ;              |
+ _________|___________| ;`-.o`"=._; ." ` '`."\` . "-._ /_______________|_______
+|                   | |o;    `"-.o`"=._``  '` " ,__.--o;   |
+|___________________|_| ;     (#) `-.o `"=.`_.--"_o.-; ;___|___________________
+____/______/______/___|o;._    "      `".o|o_.--"    ;o;____/______/______/____
+/______/______/______/_"=._o--._        ; | ;        ; ;/______/______/______/_
+____/______/______/______/__"=._o--._   ;o|o;     _._;o;____/______/______/____
+/______/______/______/______/____"=._o._; | ;_.--"o.--"_/______/______/______/_
+____/______/______/______/______/_____"=.o|o_.--""___/______/______/______/____
+/______/______/______/______/______/______/______/______/______/______/[TomekK]
+*******************************************************************************
+'''
+)
 
-size = input("\nWhat size pizza do you want? S, M OR L:\n- ")
-pepperoni = input("\nDo you want pepperoni on your pizza? Y or N:\n- ")
-extra_cheese = input("\nDo you want extra cheese? Y or N:\n- ")
+print("\nWelcome to Treasure Island. Your mission is to find the treasure.\n")
+first_choice = input("\nType 'left' or 'right' to choose your paths.\n- ")
+
+
+if first_choice == "left":
+    second_choice = input("\nWould you like to swim or wait?\n- ")
+    if second_choice == "wait":
+        third_choice = input("\nWhich door would you like to choose, red, blue or yellow?\n- ")
+        if third_choice == "red":
+            print("\nBurned by fire. Game over!")
+        elif third_choice == "blue":
+            print("\nEaten by beasts. Game over.")
+        elif third_choice == "yellow":
+            print("\nYOU WIN!")
+        else:
+            print("\nGame over.!")
+    else:
+        print("\nAttacked by trout. Game over.")
+
+else:
+    print("\nFall into a hole. Game over.")
 
