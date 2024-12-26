@@ -1,15 +1,8 @@
 import random;
+import logo;
 
-print('''
- _                                             
-| |                                            
-| |__   __ _ _ __   __ _ _ __ ___   __ _ _ __  
-| '_ \ / _' | '_ \ / _' | '_ ' _ \ / _' | '_ \ 
-| | | | (_| | | | | (_| | | | | | | (_| | | | |
-|_| |_|\__,_|_| |_|\__, |_| |_| |_|\__,_|_| |_|
-                    __/ |                      
-                   |___/
-''')
+print(logo.symbol);
+
 
 word_list = ["aardvark", "baboon", "camel"]
 
@@ -27,7 +20,7 @@ correct_letters = [];
 lives = 6;
 
 while not game_over:
-    guess = input("\nGuess the letter: ")
+    guess = input("\nGuess the letter: ").lower();
 
     display = "";
 
