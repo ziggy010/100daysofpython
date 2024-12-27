@@ -1,42 +1,44 @@
-def calculate_love_score(name1, name2):
-    total_true_in_name1 = 0;
-    total_true_in_name2 = 0;
-    total_love_in_name1 = 0;
-    total_love_in_name2 = 0;
-    total_true = 0;
-    total_love = 0;
-    love_score = "";
+import art;
 
-    for letter in name1:
-        if letter in "true":
-            total_true_in_name1 += 1;
+print(art.logo);
+
+alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+
+def caesar(encode_decode, original_text, shift_amount):
+    final_output = "";
+
+    if encode_decode == "decode":
+        shift_amount *= -1;
+
+    for letter in original_text:
+
+        if letter in alphabet:
+
+            shifted_index = alphabet.index(letter) + shift_amount;
+            shifted_index %= len(alphabet);
+            final_output += alphabet[shifted_index];
+
+        else:
+            final_output += letter;
+
+    print(f"\nHere is your {encode_decode}d message: {final_output}");
+
+game_status = True;
+
+while game_status:
+
+    direction = input("Type 'encode' to encrypt, type 'decode' to decrypt: \n").lower();
+    text = input("Type your message: \n- ").lower();
+    shift = int(input("Type the shift number:\n- "))
+
+
+    caesar(direction, text, shift);
+
+    restart_game = input("\nType 'yes' if you want to go again. Otherwise type 'no': ").lower();
+    
+    if restart_game == "no":
+        print("\nThank you for using caser cypher!\n");
+        game_status = False;
         
-        if letter in "love":
-            total_love_in_name1 += 1;
-    
-    for letter in name2:
-        if letter in "true":
-            total_true_in_name2 += 1;
-        if letter in "love":
-            total_love_in_name2 += 1;
-    
-    total_true = total_true_in_name1 + total_true_in_name2;
-    total_love = total_love_in_name1 + total_love_in_name2;
-
-    love_score = str(total_true) + str(total_love);
-
-    print(love_score);
-
-
-
-# calculate_love_score("Angela Yu", "Jack Bauer");
-calculate_love_score("Kanye West", "Kim Kardashian")
-
-
-
-
-
-
-
 
 
