@@ -12,19 +12,19 @@ Objectives 🎯
 
 Structure 📚
 
-Each day will have its own folder containing:
+- Each day will have its own folder containing:
 
-A brief description of the day's goal.
+- A brief description of the day's goal.
 
-The Python code for the day's challenge/project.
+- The Python code for the day's challenge/project.
 
-Notes or learnings from the day.
+- Notes or learnings from the day.
 
 Technologies Used 🛠️
 
-Python 3.10+: Core language for this challenge.
+- Python 3.10+: Core language for this challenge.
 
-Additional libraries and tools will be noted as used.
+- Additional libraries and tools will be noted as used.
 
 How to Use 🖥️
 
