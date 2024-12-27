@@ -4,11 +4,11 @@ Welcome to my 100 Days of Python journey! 🚀 This repository will document my 
 
 Objectives 🎯
 
-Enhance my Python programming knowledge and skills.
+- Enhance my Python programming knowledge and skills.
 
-Build practical projects to apply learned concepts.
+- Build practical projects to apply learned concepts.
 
-Stay consistent and motivated for 100 days.
+- Stay consistent and motivated for 100 days.
 
 Structure 📚
 
@@ -30,11 +30,11 @@ How to Use 🖥️
 
 Clone this repository:
 
-git clone https://github.com/yourusername/100daysofpython.git
+git clone https://github.com/ziggy010/100daysofpython
 
 Navigate to the folder for the day you want to explore:
 
-cd 100daysofpython/Day01
+cd 100daysofpython/Day1
 
 Run the Python script:
 
@@ -43,13 +43,5 @@ python main.py
 Inspiration 🌟
 
 This challenge is inspired by the #100DaysOfCode movement and tailored for Python enthusiasts.
-
-Connect with Me 🤝
-
-Twitter
-
-LinkedIn
-
-Blog
 
 Feel free to follow along, give suggestions, or even join the challenge! 😄
