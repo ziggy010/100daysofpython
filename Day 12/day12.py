@@ -22,7 +22,7 @@ comments = [
     "$CAT is going to the moon.",
     "wen listing $CAT in HL?",
     "$HAPPY is the one that I'll be getting this new year."
-    "$HAPPY is here."
+    "$HAPPY is here to stay"
 ]
 
 
