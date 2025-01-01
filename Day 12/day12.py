@@ -21,7 +21,7 @@ tweet_links = [
 comments = [
     "$CAT is going to the moon.",
     "wen listing $CAT in HL?",
-    "$HAPPY is the one that I'll be getting this new year."
+    "$HAPPY is the one that I'll  forever be getting this new year."
     "$HAPPY is here to stay"
 ]
 
