@@ -13,4 +13,4 @@ while my_question.still_has_questions():
     my_question.next_question();
 
 
-    
+print("Quiz brain completed");
