@@ -5,7 +5,7 @@ from quiz_brain import QuizBrain;
 question_bank = [];
 
 for item in question_data:
-    question_bank.append(Question(text=item["text"], answer=item["answer"]));
+    question_bank.append(Question(text=item["question"], answer=item["correct_answer"]));
 
 my_question = QuizBrain(q_list=question_bank);
 
