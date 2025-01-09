@@ -41,6 +41,6 @@ while is_game_on:
 
 
 
-
+print("this is turtle game");
 
 screen.exitonclick();
