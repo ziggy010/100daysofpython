@@ -29,6 +29,7 @@ while is_game_on:
     screen.update();
     time.sleep(0.2);
     ball.moveBall();
+    time.sleep(0.1);
 
 
 
