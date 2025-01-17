@@ -60,6 +60,7 @@ while is_game_on:
         time.sleep(1);
         ball.bounceFromPaddle();
         score_board.r_update();
+        time.sleep(1);
         
 
 
