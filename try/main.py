@@ -24,7 +24,7 @@ screen.onkey(fun=l_paddle.move_down, key="s");
 #ball
 
 ball = Ball();
-
+another_ball = Ball();
 
 is_game_on = True;
 
