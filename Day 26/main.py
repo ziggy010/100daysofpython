@@ -1,21 +1,27 @@
-# import random;
+student_dict = {
+    "student": ["Angela", "James", "Lily"], 
+    "score": [56, 76, 98]
+}
 
-# names = ['Alex', 'Beth', 'Caroline', 'Dave', 'Eleanor'];
+#Looping through dictionaries:
+for (key, value) in student_dict.items():
+    #Access key and value
+    pass
 
-# student_score = {item:random.randint(1,100) for item in names};
+import pandas
+student_data_frame = pandas.DataFrame(student_dict)
 
-# high_score = {item:value for (item, value) in student_score.items() if value > 60};
+#Loop through rows of a data frame
+for (index, row) in student_data_frame.iterrows():
+    #Access index and row
+    #Access row.student or row.score
+    pass
 
-# print(high_score);
+# Keyword Method with iterrows()
+# {new_key:new_value for (index, row) in df.iterrows()}
 
-# sentence = "What is the Airspeed Velocity of an Unladen Swallow?"
+#TODO 1. Create a dictionary in this format:
+{"A": "Alfa", "B": "Bravo"}
 
-# result = {word:len(word) for word in sentence.split()}
+#TODO 2. Create a list of the phonetic code words from a word that the user inputs.
 
-# print(result);
-
-weather_c = {"Monday": 12, "Tuesday": 14, "Wednesday": 15, "Thursday": 14, "Friday": 21, "Saturday": 22, "Sunday": 24}
-
-weather_f = {day:((temp*9/5) + 32) for (day,temp) in weather_c.items()}
-
-print(weather_f)
