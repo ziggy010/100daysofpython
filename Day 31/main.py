@@ -25,6 +25,7 @@ def generate_new_flash():
 def flip_card():
     for item, value in random_word.items():
         random_english = value;
+    print('hello');
 
     canvas.itemconfig(card_image,image = card_back_image);
     canvas.itemconfig(language, fill = 'white', text = "English");
