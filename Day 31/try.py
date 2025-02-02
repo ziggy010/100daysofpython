@@ -1,12 +1,11 @@
 import pandas;
 import random;
 
-data = pandas.read_csv('Day 31/data/french_words.csv');
 
-data_list = data.to_dict(orient = 'records');
 
-random_word = random.choice(data_list);
+my_data = pandas.read_csv('Day 31/data/french_words.csv');
+data_dict = my_data.to_dict('records');
 
-print(random_word['English']);
-print(random_word['French']);
+random_data = random.choice(data_dict)['French'];
 
+print(random_data);

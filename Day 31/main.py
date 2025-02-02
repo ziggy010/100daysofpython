@@ -4,63 +4,52 @@ import random;
 
 BACKGROUND_COLOR = "#B1DDC6"
 
-# ---------------- create new flash card ----------------
-
-data = pandas.read_csv('Day 31/data/french_words.csv');
-data_list = [{row.French: row.English} for index, row in data.iterrows()];
-random_word = {}
-
-def generate_new_flash():
-    global random_word, flip_timer;
-    random_word = random.choice(data_list);
-    window.after_cancel(flip_timer);
-    for item, value in random_word.items():
-        random_french = item;
-
-    canvas.itemconfig(word, text = random_french, fill = 'black');
-    canvas.itemconfig(language, text = "French", fill = 'black');
-    canvas.itemconfig(card_image, image = card_front_image);
-    flip_timer = window.after(3000, func=flip_card);
-
-def flip_card():
-    for item, value in random_word.items():
-        random_english = value;
-    print('hello');
-
-    canvas.itemconfig(card_image,image = card_back_image);
-    canvas.itemconfig(language, fill = 'white', text = "English");
-    canvas.itemconfig(word, fill = 'white', text = random_english);
+my_data = pandas.read_csv('Day 31/data/french_words.csv');
+data_dict = my_data.to_dict('record');
 
 
-# ---------------- UI ----------------
+def generate_word():
+    random_data = random.choice(data_dict);
+
+    random_french_word = random_data['French'];
+
+    canvas.itemconfig(word_text, text = random_french_word);
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 window = Tk();
 window.title('Flashy');
 window.config(padx=50, pady=50, bg=BACKGROUND_COLOR);
 
-flip_timer = window.after(3000, func=flip_card);
-
 canvas = Canvas(height=526, width=800, bg=BACKGROUND_COLOR, highlightthickness=0);
-card_front_image = PhotoImage(file = "Day 31/images/card_front.png");
-card_back_image = PhotoImage(file = 'Day 31/images/card_back.png');
-card_image = canvas.create_image(400, 263, image =card_front_image);
+card_front_image = PhotoImage(file = 'Day 31/images/card_front.png');
+canvas.create_image(400, 263, image = card_front_image);
 canvas.grid(row=0, column=0, columnspan=2);
 
-#text in canvas
-language = canvas.create_text(400, 150,  text = 'French', font = ("verdana", 40, 'italic'));
-word = canvas.create_text(400, 263, text = 'Trouve', font = ('verdana', 60, 'bold'));
-# change_image();
+title_text = canvas.create_text(400, 150, text = "French", font = ('verdana', 40, 'italic' ));
 
-generate_new_flash();
 
-wrong_image = PhotoImage(file = 'Day 31/images/wrong.png');
-wrong_button = Button(image=wrong_image, highlightthickness=0, command=generate_new_flash);
-wrong_button.grid(row=1, column=0);
+word_text = canvas.create_text(400, 263, text = 'word', font = ('verdana', 60, 'bold'));
 
-right_image = PhotoImage(file = 'Day 31/images/right.png');
-right_button = Button(image = right_image, highlightthickness=0, command=generate_new_flash);
+#buttons
+right_button_image = PhotoImage(file = 'Day 31/images/right.png');
+right_button = Button(image = right_button_image, highlightthickness=0, command=generate_word);
 right_button.grid(row=1, column=1);
 
+wrong_button_image = PhotoImage(file = 'Day 31/images/wrong.png');
+wrong_button = Button(image=wrong_button_image, highlightthickness=0, command=generate_word);
+wrong_button.grid(row=1, column=0);
 
 
 window.mainloop();
