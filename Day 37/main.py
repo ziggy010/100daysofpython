@@ -32,20 +32,31 @@ graph_parameters = {
 # response = requests.post(url=graph_endpoint, json = graph_parameters, headers = header);
 # print(response.text);
 
-def test():
+
+today = (dt.datetime.now()).strftime('%Y%m%d');
+
+pixel_endpoint = f"{pixela_endpoint}/{USERNAME}/graphs/graph1";
+
+pixel_parameters = {
+    'date' : today,
+    'quantity' : f"{random.randint(1,5)}",
+}
+
+# response = requests.post(url=pixel_endpoint, json=pixel_parameters, headers = header);
 
 
-    pixel_endpoint = f"{pixela_endpoint}/{USERNAME}/graphs/graph1";
+update_pixel_endpoint = f"{pixela_endpoint}/{USERNAME}/graphs/graph1/{today}";
 
-    for i in range(10,0, -1):
-        today = (dt.datetime.now() - dt.timedelta(days=i)).strftime('%Y%m%d');
+update_pixel_parameter = {
+    'quantity' : '0.5',
+}
 
-        pixel_parameters = {
-            'date' : today,
-            'quantity' : f"{random.randint(1,5)}",
-        }
+# update_response = requests.put(url=update_pixel_endpoint, json=update_pixel_parameter, headers = header);
+for i in range(10,0, -1):   
 
-        response = requests.post(url=pixel_endpoint, json=pixel_parameters, headers = header);
-        print(response.text);
+    date = (dt.datetime.now() - dt.timedelta(days=i)).strftime('%Y%m%d');
 
-test();
+    delete_endpoint = f"{pixela_endpoint}/{USERNAME}/graphs/graph1/{date}";
+
+    delete_response = requests.delete(url=delete_endpoint, headers = header);
+    print(delete_response.text);
