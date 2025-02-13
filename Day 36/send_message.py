@@ -8,8 +8,6 @@ class SendMessage:
         self.difference = difference;
         self.get_news();
 
-
-
     def send_telegram_message(self, message):
         self.bot_token_api = os.environ.get('bot_token_api');
         self.bot_chatID = os.environ.get('bot_chat_id');
