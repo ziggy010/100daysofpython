@@ -11,7 +11,7 @@ driver.get('https://orteil.dashnet.org/experiments/cookie/');
 
 cookie = driver.find_element(By.ID, value='cookie');
 
-total_time = time() + 2*60;
+total_time = time() + 5*60;
 
 while True:
     timeout = time() + 5;
